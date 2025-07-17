@@ -2,6 +2,8 @@ import { useState } from "react";
 import LoadingScreen from "./components/LoadingScreen";
 import "./index.css";
 import NavBar from "./components/NavBar";
+import Home from "./components/sections/Home";
+import About from "./components/sections/About";
 function App() {
   const [loaded, setLoaded] = useState(true);
   const [isOpen, setisOpen] = useState(false);
@@ -15,6 +17,8 @@ function App() {
         } bg-black text-gray-100`}
       >
         <NavBar menuOpen={isOpen} setOpen={setisOpen} />
+        <Home load={loaded} />
+        <About/>
       </div>
     </>
   );

@@ -9,11 +9,7 @@ body {
   color: #f3f4f6;
 }
 
-
-
-
-
- @layer utilities {
+@layer utilities {
   @keyframes blink {
     0%,
     100% {
@@ -41,4 +37,19 @@ body {
     animation: loading 0.8s ease infinite;
   }
 
- }
+  @keyframes ball {
+    0% {
+      transform: translateX(0%);
+    }
+
+
+50%{
+      transform: translateY(100%);
+
+}
+  }
+
+  .animate-ball {
+    animation: ball 1s ease-in-out infinite;
+  }
+}
