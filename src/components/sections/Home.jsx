@@ -29,7 +29,7 @@ const Home = ({ load }) => {
       className="min-h-screen flex justify-center items-center relative "
     >
       <div className="text-center z-10 px-4">
-                <Name load={load} />
+        <Name load={load} />
 
         <p className="text-lg md:text-xl text-gray-400 max-w-lg mb-8 mx-auto">
           Frontend web wizard, Flutter app creator, and forex market
@@ -46,12 +46,12 @@ const Home = ({ load }) => {
             view projects
           </a>
           <a
-            href="#projects"
+            href="#contact"
             className={`border border-blue-500/50 py-3 px-6 transition duration-700 hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(59, 130, 246, 0.4)] ${
               buttonTwo ? "opacity-100" : "opacity-0"
             }`}
           >
-            view projects
+            Contact me
           </a>
         </div>
       </div>

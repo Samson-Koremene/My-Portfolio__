@@ -18,10 +18,14 @@ const Name = ({ load }) => {
   }, [load]);
   return (
     <div className="">
-      <Ball moved={moved} />
-     <h1 className="text-3xl sm:text-5xl md:text-7xl mb-4 bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent font-bold leading-tight ">
-          HI, I am Legend
-        </h1>
+      <h1 className="text-3xl sm:text-5xl md:text-7xl mb-4 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent font-bold leading-tight ">
+        H
+        <span className="relative inline-block bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent ">
+          I
+          <Ball moved={moved} />
+        </span>
+        , I am Legend
+      </h1>
     </div>
   );
 };

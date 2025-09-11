@@ -4,6 +4,8 @@ import "./index.css";
 import NavBar from "./components/NavBar";
 import Home from "./components/sections/Home";
 import About from "./components/sections/About";
+import Project from "./components/sections/Project";
+import Contact from "./components/sections/Contact";
 function App() {
   const [loaded, setLoaded] = useState(true);
   const [isOpen, setisOpen] = useState(false);
@@ -18,7 +20,9 @@ function App() {
       >
         <NavBar menuOpen={isOpen} setOpen={setisOpen} />
         <Home load={loaded} />
-        <About/>
+        <About />
+        <Project />
+        <Contact/>
       </div>
     </>
   );

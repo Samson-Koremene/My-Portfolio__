@@ -17,7 +17,7 @@ const NavBar = ({ menuOpen, setOpen }) => {
     },
     {
       title: "Contacts",
-      href: "#contacts",
+      href: "#contact",
     },
   ];
 
@@ -27,10 +27,10 @@ const NavBar = ({ menuOpen, setOpen }) => {
         setOpen(false);
       }
     };
-    
+
     // Always listen for resize
     window.addEventListener("resize", handleResize);
-    
+
     // Clean up on unmount
     return () => {
       window.removeEventListener("resize", handleResize);
@@ -42,9 +42,12 @@ const NavBar = ({ menuOpen, setOpen }) => {
       <div className="max-w-4xl mx-auto px-4">
         <div className="h-16 flex justify-between items-center">
           <a href="#home" className="font-mono font-bold text-xl text-white">
-            Iam<span className="bg-clip-text text-transparent bg-gradient-to-l from-blue-500 to-purple-700">legend</span>
+            Iam
+            <span className="bg-clip-text text-transparent bg-gradient-to-l from-blue-500 to-cyan-400">
+              legend
+            </span>
           </a>
-          
+
           <div className="w-7 h-7 relative cursor-pointer z-40 md:hidden">
             <button
               className="w-full h-full"
@@ -62,11 +65,11 @@ const NavBar = ({ menuOpen, setOpen }) => {
               />
             </button>
           </div>
-          
+
           <div className="md:flex hidden items-center space-x-8">
             {NavLinks.map((items, index) => (
               <a
-                className="text-gray-300 bg-clip-text hover:text-transparent bg-gradient-to-l from-blue-500 to-purple-700 transition-colors font-mono text-[16px] duration-300"
+                className="text-gray-300 bg-clip-text hover:text-transparent bg-gradient-to-l from-blue-500 to-cyan-400 transition-colors font-mono text-[16px] duration-300"
                 key={index}
                 href={items.href}
               >
@@ -76,12 +79,11 @@ const NavBar = ({ menuOpen, setOpen }) => {
           </div>
         </div>
       </div>
-      
-      
+
       <div
         className={`fixed inset-0 flex flex-col w-full h-screen bg-black/70 z-30 transition-all duration-300 ease-in-out items-center justify-center gap-8 md:hidden ${
-          menuOpen 
-            ? "opacity-100 pointer-events-auto" 
+          menuOpen
+            ? "opacity-100 pointer-events-auto"
             : "opacity-0 pointer-events-none"
         }`}
       >
@@ -93,7 +95,7 @@ const NavBar = ({ menuOpen, setOpen }) => {
             style={{ transitionDelay: `${index * 100}ms` }}
             key={index}
             href={items.href}
-            onClick={() => setOpen(false)} 
+            onClick={() => setOpen(false)}
           >
             {items.title}
           </a>
