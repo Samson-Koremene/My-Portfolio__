@@ -5,18 +5,18 @@ import RevealOnScroll from "../RevealOnScroll";
 const Project = () => {
   const featuredProjects = [
     {
-      title: "Digital Skill exchange platform",
+      title: "Bayelsa-Traffic-AI-Dynamics",
       description:
         "A web platform that connects learners and experts, enabling users to exchange digital skills, book sessions, and grow their professional network.",
-      technologies: ["Flutter", "Dart", "Firebase"],
-      liveUrl: "#",
+      technologies: ["React.js", "Typescript", "Supabase","Tailwind-Css"],
+      liveUrl: "https://bayelsa-traffic-ai-dynamics.vercel.app/",
       githubUrl: "#",
     },
     {
-      title: "E-commerce accessories platform",
+      title: "NewLabel Tv",
       description:
-        "A modern online store for tech accessories, offering seamless product browsing, secure checkout, and real-time order tracking for an enhanced shopping experience.",
-      technologies: ["React", "Javascript", "TailwindCss", "Supabase"],
+        "A Streaming and Buying of course plaform where you Explore exclusive content from our growing collection of creators and storytellers.",
+      technologies: ["React.js", "Typescript", "Tailwind-Css", "Supabase"],
       liveUrl: "#",
       githubUrl: "#",
     },

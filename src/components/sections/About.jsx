@@ -17,8 +17,7 @@ const About = () => {
           </h2>
           <div className="max-w-3xl mx-auto p-6 border-white/10 border hover:-translate-y-1 transition-all text-center">
             <p className="mb-6 text-gray-300 ">
-              I am a passionate Frontend Web Developer and Flutter mobile app
-              specialist with a keen eye for design and a drive for innovation.
+              I am a passionate Frontend Web Developer and specialist with a keen eye for design and a drive for innovation.
               My expertise lies in building seamless, responsive user interfaces
               and crafting engaging digital experiences across platforms.
             </p>
@@ -62,7 +61,7 @@ const About = () => {
               </h3>
               <ul className="list-disc list-inside text-gray-300 space-y-3 text-[12px]">
                 <li>
-                  <strong>B.S. in Computer Science</strong> - Federal University
+                  <strong>B.S. in Mathematics,</strong> - Federal University
                   Otuoke (2020-2024)
                 </li>
                 <li>
@@ -75,6 +74,16 @@ const About = () => {
               <h3 className="text-xl font-bold mb-4">
                 <BriefcaseIcon className="w-5 h-5" /> Work Experience
               </h3>
+              <div>
+                  <h4 className="font-semibold">
+                    Medicx (2025-present)
+                  </h4>
+                  <p className="text-[12px]">
+                    Assisted in building front end components and integrating
+                    REST APIs{" "}
+                  </p>
+                </div>
+                
               <div className="space-y-4 text-gray-300">
                 <div>
                   <h4 className="font-semibold">
@@ -88,7 +97,7 @@ const About = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold">
-                    Intern at DevFoundation (2019)
+                    Crudpen Technologies (2023-present)
                   </h4>
                   <p className="text-[12px]">
                     Assisted in building front end components and integrating

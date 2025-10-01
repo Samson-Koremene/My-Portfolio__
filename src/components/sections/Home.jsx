@@ -32,7 +32,7 @@ const Home = ({ load }) => {
         <Name load={load} />
 
         <p className="text-lg md:text-xl text-gray-400 max-w-lg mb-8 mx-auto">
-          Frontend web wizard, Flutter app creator, and forex market
+          Frontend web wizard, AI/ML enthusiast, and Graphics Designer
           explorer—turning ideas into beautiful digital realities. Let’s build
           something awesome!
         </p>

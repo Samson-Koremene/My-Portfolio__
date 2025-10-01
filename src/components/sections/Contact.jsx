@@ -223,10 +223,19 @@ const Contact = () => {
               <p className="text-center text-gray-400 text-sm">
                 Prefer email? Reach out directly at{" "}
                 <a
-                  href="mailto:daeviz15felix@gmail.com"
+                  href="mailto:koremenesamson@gmail.com"
                   className="text-blue-400 hover:text-blue-300 transition-colors"
                 >
-                  daeviz15felix@gmail.com
+                  koremenesamson@gmail.com
+                </a>
+              </p>
+              <p className="text-center text-gray-400 text-sm mt-2">
+                Or call me at {" "}
+                <a
+                  href="tel:+2349023949297"
+                  className="text-blue-400 hover:text-blue-300 transition-colors"
+                >
+                  +234 9023949297
                 </a>
               </p>
             </div>

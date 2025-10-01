@@ -2,6 +2,7 @@ import { Inter } from "next/font/google"
 import { cn } from "@/lib/utils"
 import { ThemeProvider } from "@/components/theme-provider"
 import { Toaster } from "@/components/ui/sonner" // Changed from toaster to sonner
+import Footer from "@/components/Footer";
 import "./globals.css"
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" })
@@ -19,6 +20,7 @@ export default function RootLayout({ children }) {
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           {children}
           <Toaster /> {/* This now uses Sonner */}
+          <Footer />
         </ThemeProvider>
       </body>
     </html>

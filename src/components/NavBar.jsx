@@ -42,9 +42,9 @@ const NavBar = ({ menuOpen, setOpen }) => {
       <div className="max-w-4xl mx-auto px-4">
         <div className="h-16 flex justify-between items-center">
           <a href="#home" className="font-mono font-bold text-xl text-white">
-            Iam
+            Sam
             <span className="bg-clip-text text-transparent bg-gradient-to-l from-blue-500 to-cyan-400">
-              legend
+              Tech
             </span>
           </a>
 

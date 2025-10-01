@@ -24,7 +24,7 @@ const Name = ({ load }) => {
           I
           <Ball moved={moved} />
         </span>
-        , I am Legend
+        , Samtech
       </h1>
     </div>
   );
