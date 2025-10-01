@@ -17,7 +17,7 @@ const Project = () => {
       description:
         "A Streaming and Buying of course plaform where you Explore exclusive content from our growing collection of creators and storytellers.",
       technologies: ["React.js", "Typescript", "Tailwind-Css", "Supabase"],
-      liveUrl: "#",
+      liveUrl: "https://newlabel-hub.vercel.app/",
       githubUrl: "#",
     },
     {
