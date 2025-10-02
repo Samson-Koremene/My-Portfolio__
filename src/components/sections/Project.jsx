@@ -24,16 +24,16 @@ const Project = () => {
       title: "Netflix Clone",
       description:
         "A full-featured streaming platform inspired by Netflix, with user authentication, movie browsing, and responsive video playback.",
-      technologies: ["React", "Javascript", "TailwindCss", "Supabase"],
+      technologies: ["React", "Typescript", "TailwindCss", "Supabase"],
       liveUrl: "#",
       githubUrl: "#",
     },
     {
-      title: "Prison Management System",
+      title: "CryptoTracker",
       description:
-        "A comprehensive system for managing inmate records, staff, and facility operations, designed to streamline administrative tasks and improve security.",
-      technologies: ["React", "Javascript", "TailwindCss", "Supabase"],
-      liveUrl: "#",
+        "CryptoTracker is a simple, real-time crypto app that provides live prices, market charts, alerts, portfolio tracking, and news all in one clean interface..",
+      technologies: ["React", "Typescript", "TailwindCss", "Supabase"],
+      liveUrl: "https://cryptotracker-nine-pink.vercel.app/",
       githubUrl: "#",
     },
   ];
