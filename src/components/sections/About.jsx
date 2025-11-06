@@ -2,7 +2,7 @@ import React from "react";
 import { AcademicCapIcon, BriefcaseIcon } from "@heroicons/react/24/solid";
 import RevealOnScroll from "../RevealOnScroll";
 const About = () => {
-  const frontend = ["React", "Javascript", "TailwindCss", "Flutter"];
+  const frontend = ["HTML", "CSS", "React.js", "Javascript", "TailwindCss", "Next.js","Typescript"];
   const backend = ["Fastapi", " PostgreSQL", "Supabase", "Firebase"];
 
   return (
