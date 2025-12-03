@@ -21,11 +21,11 @@ const Project = () => {
       githubUrl: "#",
     },
     {
-      title: "Netflix Clone",
+      title: "Medicx",
       description:
-        "A full-featured streaming platform inspired by Netflix, with user authentication, movie browsing, and responsive video playback.",
-      technologies: ["React", "Typescript", "TailwindCss", "Supabase"],
-      liveUrl: "#",
+        "MEDICX connects patients, doctors, labs, pharmacies, and nurses in one seamless system. Our goal is simple: to make healthcare easier, safer, and more connected, while giving every user control over their care journey.",
+      technologies: ["React", "Typescript", "TailwindCss",],
+      liveUrl: "https://medicx.app/",
       githubUrl: "#",
     },
     {
@@ -41,42 +41,42 @@ const Project = () => {
   return (
     <section
       id="projects"
-      className="min-h-screen flex justify-center items-center py-20"
+      className="min-h-screen flex justify-center items-center py-16 sm:py-20 px-4 sm:px-6"
       style={{ fontFamily: 'Inter, system-ui, -apple-system, sans-serif' }}
     >
-      <div className="max-w-4xl mx-auto px-4">
+      <div className="max-w-4xl mx-auto w-full">
         <RevealOnScroll>
           <h2 
-            className="text-3xl font-bold mb-8 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent text-center tracking-tight"
+            className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent text-center tracking-tight"
             style={{ fontFamily: 'Poppins, sans-serif' }}
           >
             Featured Projects
           </h2>
         </RevealOnScroll>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
           {featuredProjects.map((project, index) => (
             <RevealOnScroll key={index}>
-              <div className="group p-6 border border-white/10 rounded-xl hover:-translate-y-1 transition-all hover:border-blue-500/30 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)]">
+              <div className="group p-4 sm:p-6 border border-white/10 rounded-xl hover:-translate-y-1 transition-all hover:border-blue-500/30 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)]">
                 <h3 
-                  className="text-xl mb-3 font-semibold tracking-tight"
+                  className="text-lg sm:text-xl mb-2 sm:mb-3 font-semibold tracking-tight"
                   style={{ fontFamily: 'Poppins, sans-serif' }}
                 >
                   {project.title}
                 </h3>
                 <p 
-                  className="text-gray-400 text-sm mb-4 leading-relaxed"
+                  className="text-gray-400 text-xs sm:text-sm mb-3 sm:mb-4 leading-relaxed"
                   style={{ fontFamily: 'Inter, sans-serif' }}
                 >
                   {project.description}
                 </p>
                 
                 {/* Technologies */}
-                <div className="flex flex-wrap gap-2 mb-4">
+                <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-3 sm:mb-4">
                   {project.technologies.map((tech, techIndex) => (
                     <span
                       key={techIndex}
-                      className="bg-blue-500/10 text-blue-500 rounded-full py-1.5 px-3 text-sm font-medium hover:bg-blue-500/20 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition"
+                      className="bg-blue-500/10 text-blue-500 rounded-full py-1 px-2 sm:py-1.5 sm:px-3 text-xs sm:text-sm font-medium hover:bg-blue-500/20 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition"
                       style={{ fontFamily: 'Inter, sans-serif' }}
                     >
                       {tech}
@@ -85,34 +85,34 @@ const Project = () => {
                 </div>
 
                 {/* Project Links */}
-                <div className="flex items-center gap-4">
+                <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
                   <a
                     href={project.liveUrl}
-                    className="flex items-center gap-2 text-blue-400 hover:text-blue-300 text-sm font-medium transition-all group/link"
+                    className="flex items-center gap-2 text-blue-400 hover:text-blue-300 text-xs sm:text-sm font-medium transition-all group/link"
                     style={{ fontFamily: 'Inter, sans-serif' }}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <ExternalLink size={16} />
+                    <ExternalLink size={14} className="sm:w-4 sm:h-4" />
                     <span>Live Demo</span>
                     <ArrowUpRight 
-                      size={14} 
-                      className="transform transition-transform group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5" 
+                      size={12} 
+                      className="sm:w-3.5 sm:h-3.5 transform transition-transform group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5" 
                     />
                   </a>
                   
                   <a
                     href={project.githubUrl}
-                    className="flex items-center gap-2 text-gray-400 hover:text-white text-sm font-medium transition-all group/link"
+                    className="flex items-center gap-2 text-gray-400 hover:text-white text-xs sm:text-sm font-medium transition-all group/link"
                     style={{ fontFamily: 'Inter, sans-serif' }}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <Github size={16} />
+                    <Github size={14} className="sm:w-4 sm:h-4" />
                     <span>Code</span>
                     <ArrowUpRight 
-                      size={14} 
-                      className="transform transition-transform group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5" 
+                      size={12} 
+                      className="sm:w-3.5 sm:h-3.5 transform transition-transform group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5" 
                     />
                   </a>
                 </div>

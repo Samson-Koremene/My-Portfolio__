@@ -39,19 +39,20 @@ const NavBar = ({ menuOpen, setOpen }) => {
 
   return (
     <nav className="fixed top-0 w-full bg-[rgba(10, 10, 10, 0.8)] backdrop-blur-lg border-b border-white/40 z-50">
-      <div className="max-w-4xl mx-auto px-4">
-        <div className="h-16 flex justify-between items-center">
-          <a href="#home" className="font-mono font-bold text-xl text-white">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6">
+        <div className="h-14 sm:h-16 flex justify-between items-center">
+          <a href="#home" className="font-mono font-bold text-lg sm:text-xl text-white">
             Sam
             <span className="bg-clip-text text-transparent bg-gradient-to-l from-blue-500 to-cyan-400">
               Tech
             </span>
           </a>
 
-          <div className="w-7 h-7 relative cursor-pointer z-40 md:hidden">
+          <div className="w-6 h-6 sm:w-7 sm:h-7 relative cursor-pointer z-40 md:hidden">
             <button
               className="w-full h-full"
               onClick={() => setOpen(!menuOpen)}
+              aria-label="Toggle menu"
             >
               <Bars3Icon
                 className={`w-full h-full absolute inset-0 transition-all duration-300 ${
@@ -66,10 +67,10 @@ const NavBar = ({ menuOpen, setOpen }) => {
             </button>
           </div>
 
-          <div className="md:flex hidden items-center space-x-8">
+          <div className="md:flex hidden items-center space-x-6 lg:space-x-8">
             {NavLinks.map((items, index) => (
               <a
-                className="text-gray-300 bg-clip-text hover:text-transparent bg-gradient-to-l from-blue-500 to-cyan-400 transition-colors font-mono text-[16px] duration-300"
+                className="text-gray-300 bg-clip-text hover:text-transparent bg-gradient-to-l from-blue-500 to-cyan-400 transition-colors font-mono text-sm lg:text-base duration-300"
                 key={index}
                 href={items.href}
               >
@@ -81,7 +82,7 @@ const NavBar = ({ menuOpen, setOpen }) => {
       </div>
 
       <div
-        className={`fixed inset-0 flex flex-col w-full h-screen bg-black/70 z-30 transition-all duration-300 ease-in-out items-center justify-center gap-8 md:hidden ${
+        className={`fixed inset-0 flex flex-col w-full h-screen bg-black/90 backdrop-blur-sm z-30 transition-all duration-300 ease-in-out items-center justify-center gap-6 sm:gap-8 md:hidden ${
           menuOpen
             ? "opacity-100 pointer-events-auto"
             : "opacity-0 pointer-events-none"
@@ -89,7 +90,7 @@ const NavBar = ({ menuOpen, setOpen }) => {
       >
         {NavLinks.map((items, index) => (
           <a
-            className={`text-gray-300 hover:text-blue-500 transition-all duration-300 text-[15px] font-mono ${
+            className={`text-gray-300 hover:text-blue-500 transition-all duration-300 text-lg sm:text-xl font-mono ${
               menuOpen ? " translate-y-0" : " translate-y-4"
             }`}
             style={{ transitionDelay: `${index * 100}ms` }}

@@ -110,22 +110,22 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="min-h-screen bg-black flex justify-center items-center py-20 px-4">
+    <section id="contact" className="min-h-screen bg-black flex justify-center items-center py-16 sm:py-20 px-4 sm:px-6">
       <RevealOnScroll>
         <div className="w-full max-w-2xl">
           {/* Header */}
-          <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+          <div className="text-center mb-8 sm:mb-12">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-3 sm:mb-4">
               Get In <span className="text-blue-400">Touch</span>
             </h2>
-            <p className="text-gray-400 text-lg max-w-md mx-auto">
+            <p className="text-gray-400 text-sm sm:text-base md:text-lg max-w-md mx-auto px-4 sm:px-0">
               Let's collaborate and bring your ideas to life. Send me a message
               and I'll get back to you soon.
             </p>
           </div>
 
           {/* Form Container */}
-          <div className="bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-2xl p-8 shadow-2xl">
+          <div className="bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-2xl p-4 sm:p-6 md:p-8 shadow-2xl">
             <form onSubmit={handleSubmit} className="space-y-6">
               {/* Name Input */}
               <div className="space-y-2">
