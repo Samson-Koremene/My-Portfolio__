@@ -41,7 +41,11 @@ const NavBar = ({ menuOpen, setOpen }) => {
     <nav className="fixed top-0 w-full bg-[rgba(10, 10, 10, 0.8)] backdrop-blur-lg border-b border-white/40 z-50">
       <div className="max-w-4xl mx-auto px-4 sm:px-6">
         <div className="h-14 sm:h-16 flex justify-between items-center">
-          <a href="#home" className="font-mono font-bold text-lg sm:text-xl text-white">
+          <a 
+            href="#home" 
+            className="font-bold text-lg sm:text-xl text-white tracking-tight"
+            style={{ fontFamily: 'var(--font-mono)' }}
+          >
             Sam
             <span className="bg-clip-text text-transparent bg-gradient-to-l from-blue-500 to-cyan-400">
               Tech
@@ -70,7 +74,8 @@ const NavBar = ({ menuOpen, setOpen }) => {
           <div className="md:flex hidden items-center space-x-6 lg:space-x-8">
             {NavLinks.map((items, index) => (
               <a
-                className="text-gray-300 bg-clip-text hover:text-transparent bg-gradient-to-l from-blue-500 to-cyan-400 transition-colors font-mono text-sm lg:text-base duration-300"
+                className="text-gray-300 bg-clip-text hover:text-transparent bg-gradient-to-l from-blue-500 to-cyan-400 transition-colors text-sm lg:text-base duration-300 font-medium"
+                style={{ fontFamily: 'var(--font-inter)' }}
                 key={index}
                 href={items.href}
               >
@@ -90,10 +95,13 @@ const NavBar = ({ menuOpen, setOpen }) => {
       >
         {NavLinks.map((items, index) => (
           <a
-            className={`text-gray-300 hover:text-blue-500 transition-all duration-300 text-lg sm:text-xl font-mono ${
+            className={`text-gray-300 hover:text-blue-500 transition-all duration-300 text-lg sm:text-xl font-medium ${
               menuOpen ? " translate-y-0" : " translate-y-4"
             }`}
-            style={{ transitionDelay: `${index * 100}ms` }}
+            style={{ 
+              transitionDelay: `${index * 100}ms`,
+              fontFamily: 'var(--font-inter)'
+            }}
             key={index}
             href={items.href}
             onClick={() => setOpen(false)}

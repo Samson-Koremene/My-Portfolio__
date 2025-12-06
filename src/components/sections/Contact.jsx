@@ -28,20 +28,22 @@ const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setLoading(true); // Set loading to true when submission starts
-    console.log("Submitting form:", e.currentTarget);
+    setLoading(true);
+    
+    console.log("Form data:", formData);
 
     try {
+      // Using sendForm with the form element
       const result = await emailjs.sendForm(
         SERVICE_ID,
         TEMPLATE_ID,
-        e.currentTarget
+        e.currentTarget,
+        USER_ID
       );
+      
       console.log("EmailJS result:", result);
 
-      // EmailJS success is usually indicated by result.status === 200 or result.text === 'OK'
       if (result.status === 200 || result.text === "OK") {
-        console.log("About to show success toast"); // Debug log
         toast.success('Message sent successfully! We will get back to you shortly.', {
           duration: 4000,
           position: 'top-right',
@@ -115,7 +117,10 @@ const Contact = () => {
         <div className="w-full max-w-2xl">
           {/* Header */}
           <div className="text-center mb-8 sm:mb-12">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-3 sm:mb-4">
+            <h2 
+              className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-3 sm:mb-4 tracking-tight"
+              style={{ fontFamily: 'var(--font-space)' }}
+            >
               Get In <span className="text-blue-400">Touch</span>
             </h2>
             <p className="text-gray-400 text-sm sm:text-base md:text-lg max-w-md mx-auto px-4 sm:px-0">
@@ -125,16 +130,20 @@ const Contact = () => {
           </div>
 
           {/* Form Container */}
-          <div className="bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-2xl p-4 sm:p-6 md:p-8 shadow-2xl">
+          <div className="relative bg-gradient-to-br from-gray-900/50 to-gray-900/30 backdrop-blur-md border border-gray-800 hover:border-blue-500/30 rounded-2xl p-4 sm:p-6 md:p-8 shadow-2xl hover:shadow-[0_20px_60px_rgba(59,130,246,0.2)] transition-all duration-500">
+            {/* Decorative gradient */}
+            <div className="absolute -top-20 -right-20 w-40 h-40 bg-blue-500/20 rounded-full blur-3xl"></div>
+            <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-cyan-500/20 rounded-full blur-3xl"></div>
             <form onSubmit={handleSubmit} className="space-y-6">
               {/* Name Input */}
-              <div className="space-y-2">
-                <label className="text-sm font-medium text-gray-300 flex items-center gap-2">
+              <div className="space-y-2 relative">
+                <label htmlFor="user_name" className="text-sm font-medium text-gray-300 flex items-center gap-2">
                   <User size={16} />
                   Full Name
                 </label>
                 <Input
-                  name="name"
+                  id="user_name"
+                  name="user_name"
                   value={formData.name}
                   onChange={(e) =>
                     setFormData({ ...formData, name: e.target.value })
@@ -142,18 +151,19 @@ const Contact = () => {
                   placeholder="Enter your full name"
                   required
                   disabled={loading}
-                  className="bg-gray-800/50 border-gray-700 text-white placeholder:text-gray-500 focus:border-blue-400 focus:ring-blue-400/20 h-12 rounded-lg"
+                  className="relative bg-gray-800/50 border-gray-700 text-white placeholder:text-gray-500 focus:border-blue-400 focus:ring-blue-400/20 h-12 rounded-lg"
                 />
               </div>
 
               {/* Email Input */}
-              <div className="space-y-2">
-                <label className="text-sm font-medium text-gray-300 flex items-center gap-2">
+              <div className="space-y-2 relative">
+                <label htmlFor="user_email" className="text-sm font-medium text-gray-300 flex items-center gap-2">
                   <Mail size={16} />
                   Email Address
                 </label>
                 <Input
-                  name="email"
+                  id="user_email"
+                  name="user_email"
                   type="email"
                   value={formData.email}
                   onChange={(e) =>
@@ -162,17 +172,18 @@ const Contact = () => {
                   placeholder="your.email@example.com"
                   required
                   disabled={loading}
-                  className="bg-gray-800/50 border-gray-700 text-white placeholder:text-gray-500 focus:border-blue-400 focus:ring-blue-400/20 h-12 rounded-lg"
+                  className="relative bg-gray-800/50 border-gray-700 text-white placeholder:text-gray-500 focus:border-blue-400 focus:ring-blue-400/20 h-12 rounded-lg"
                 />
               </div>
 
               {/* Message Input */}
-              <div className="space-y-2">
-                <label className="text-sm font-medium text-gray-300 flex items-center gap-2">
+              <div className="space-y-2 relative">
+                <label htmlFor="message" className="text-sm font-medium text-gray-300 flex items-center gap-2">
                   <MessageSquare size={16} />
                   Message
                 </label>
                 <Textarea
+                  id="message"
                   name="message"
                   rows={6}
                   value={formData.message}
@@ -182,7 +193,7 @@ const Contact = () => {
                   placeholder="Tell me about your project, ideas, or just say hello..."
                   required
                   disabled={loading}
-                  className="bg-gray-800/50 border-gray-700 text-white placeholder:text-gray-500 focus:border-blue-400 focus:ring-blue-400/20 rounded-lg resize-none"
+                  className="relative bg-gray-800/50 border-gray-700 text-white placeholder:text-gray-500 focus:border-blue-400 focus:ring-blue-400/20 rounded-lg resize-none"
                 />
               </div>
 
